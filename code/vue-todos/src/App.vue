@@ -1,19 +1,38 @@
 <template>
   <div id="app">
     <h1>{{ title }}</h1>
+    <ul>
+      <li v-for="(todo,index) in todos">
+        <label>{{ index+1 }}.{{ todo.value}}</label>
+      </li>
+    </ul>
+    <ul>
+      <li v-for="value in object">
+        {{ value }}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'app',
-  data () {
+  data() {
     return {
-      title: 'vue-todos'
+      title: 'vue-todos',
+      todos: [
+        { value: "阅读一本关于前端开发的书", done: false },
+        { value: "补充示例代码", done: true },
+        { value: "写心得", done: false }
+      ],
+      object: {
+        first_name: "Ray",
+        last_name: "Liang"
+      }
     }
   }
 }
 </script>
 
 <style>
+
 </style>
