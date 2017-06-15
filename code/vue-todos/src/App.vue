@@ -6,6 +6,11 @@
         <label>{{ index+1 }}.{{ todo.value}}</label>
       </li>
     </ul>
+    <ul>
+      <li v-for="value in object">
+        {{ value }}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -18,7 +23,11 @@ export default {
         { value: "阅读一本关于前端开发的书", done: false },
         { value: "补充示例代码", done: true },
         { value: "写心得", done: false }
-      ]
+      ],
+      object: {
+        first_name: "Ray",
+        last_name: "Liang"
+      }
     }
   }
 }
