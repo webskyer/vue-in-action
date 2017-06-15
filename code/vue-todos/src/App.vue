@@ -31,12 +31,12 @@ export default {
         {
           value: "补充示例代码",
           done: true,
-          created: Date.now()
+          created: Date.now() + 300000
         },
         {
           value: "写心得",
           done: false,
-          created: Date.now()
+          created: Date.now() - 300000
         }
       ]
     }
