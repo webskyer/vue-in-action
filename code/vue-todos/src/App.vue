@@ -4,7 +4,7 @@
     <ul class="todos">
       <li v-for="(todo,index) in todos" v-bind:class="{'checked': todo.done}">
         <label>{{ index+1 }}.{{ todo.value}}</label>
-        <time>{{ todo.created }}</time>
+        <time>{{ todo.created | date }}</time>
       </li>
     </ul>
     </ul>
@@ -12,8 +12,12 @@
 </template>
 
 <script>
-import './assets/site.less';
-import './assets/todos.less';
+import './assets/site.less'
+import './assets/todos.less'
+import moment from 'moment'
+import 'moment/locale/zh-cn'
+moment.locale('zh-cn')
+
 export default {
   data() {
     return {
