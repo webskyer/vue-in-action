@@ -2,12 +2,12 @@
   <div id="app">
     <h1>{{ title }}</h1>
     <ul>
-      <li v-for="todo in todos">
-        <label>{{ todo.value}}</label>
+      <li v-for="(todo,index) in todos">
+        <label>{{ index+1 }}.{{ todo.value}}</label>
       </li>
     </ul>
+  </div>
 </template>
-
 
 <script>
 export default {
