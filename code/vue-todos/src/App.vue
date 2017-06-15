@@ -2,7 +2,7 @@
   <div id="app">
     <h1>{{ title }}</h1>
     <ul class="todos">
-      <li v-for="(todo,index) in todos" :class="{'checked': todo.done}">
+      <li v-for="(todo,index) in todos" v-bind:class="{'checked': todo.done}">
         <label>{{ index+1 }}.{{ todo.value}}</label>
       </li>
     </ul>
